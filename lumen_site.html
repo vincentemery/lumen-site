@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lumen Genomics, PBC</title>
+    <style>
+        :root {
+            --bg: #f8f5f0;
+            --text: #111;
+            --text-secondary: #999;
+            --link-hover: #555;
+        }
+
+        [data-theme="dark"] {
+            --bg: #1a1a1a;
+            --text: #e0e0e0;
+            --text-secondary: #666;
+            --link-hover: #aaa;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            font-size: 17px;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            color: var(--text);
+            background-color: var(--bg);
+            line-height: 1.75;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        .container {
+            max-width: 580px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        /* Theme toggle */
+        .theme-toggle {
+            position: fixed;
+            top: 28px;
+            right: 28px;
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 6px;
+            color: var(--text);
+            opacity: 0.5;
+            transition: opacity 0.2s ease;
+            z-index: 10;
+        }
+
+        .theme-toggle:hover {
+            opacity: 1;
+        }
+
+        .theme-toggle svg {
+            width: 18px;
+            height: 18px;
+            display: block;
+        }
+
+        .theme-toggle .icon-moon { display: block; }
+        .theme-toggle .icon-sun { display: none; }
+
+        [data-theme="dark"] .theme-toggle .icon-moon { display: none; }
+        [data-theme="dark"] .theme-toggle .icon-sun { display: block; }
+
+        header {
+            padding: 100px 0 40px;
+        }
+
+        .company-name {
+            font-family: -apple-system, 'Helvetica Neue', Arial, sans-serif;
+            font-size: 1.05rem;
+            font-weight: 500;
+            letter-spacing: 0.04em;
+            color: var(--text);
+            margin-bottom: 0;
+        }
+
+        .content {
+            padding-bottom: 40px;
+        }
+
+        p {
+            margin-bottom: 24px;
+            font-size: 1rem;
+            font-weight: 400;
+            color: var(--text);
+        }
+
+        .opening {
+            font-size: 1.1rem;
+            font-weight: bold;
+            margin-bottom: 28px;
+        }
+
+        .standout {
+            font-size: 1.1rem;
+            font-weight: bold;
+        }
+
+        strong {
+            font-weight: bold;
+        }
+
+        em {
+            font-style: italic;
+        }
+
+        a {
+            color: var(--text);
+            text-decoration: none;
+        }
+
+        a:hover {
+            color: var(--link-hover);
+            text-decoration: underline;
+        }
+
+        footer {
+            padding: 0 0 60px;
+        }
+
+        .copyright {
+            font-family: -apple-system, 'Helvetica Neue', Arial, sans-serif;
+            font-size: 0.78rem;
+            color: var(--text-secondary);
+            margin-top: 0;
+            margin-bottom: 0;
+        }
+
+        @media (max-width: 600px) {
+            html { font-size: 16px; }
+            header { padding: 72px 0 36px; }
+            .theme-toggle { top: 20px; right: 20px; }
+        }
+    </style>
+</head>
+<body>
+
+<button class="theme-toggle" aria-label="Toggle theme" onclick="toggleTheme()">
+    <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+    </svg>
+    <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="12" cy="12" r="5"/>
+        <line x1="12" y1="1" x2="12" y2="3"/>
+        <line x1="12" y1="21" x2="12" y2="23"/>
+        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/>
+        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+        <line x1="1" y1="12" x2="3" y2="12"/>
+        <line x1="21" y1="12" x2="23" y2="12"/>
+        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/>
+        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+    </svg>
+</button>
+
+<div class="container">
+
+    <header>
+        <p class="company-name">Lumen Genomics, PBC</p>
+    </header>
+
+    <div class="content">
+
+        <p class="opening">The food system is not ready for what's coming.</p>
+
+        <p>Climate change is rewriting the biological contract between crops and the environments they grow in. Plants adapt through natural selection over thousands of years. We have decades.</p>
+
+        <p>By mid-century, global crop failure rates will be 25 times what they are today. Rice, wheat, and other staple crops will fail every other year. Global yields will decline while the population climbs toward ten billion. This will be the central challenge of our generation.</p>
+
+        <p>Lumen Genomics was started to solve one problem: developing artificial intelligence models to identify which genes need to be edited to make crops survive what's coming.</p>
+
+        <p>CRISPR can modify any plant genome with precision. The technology is mature. What's missing is the knowledge of <em>what to change</em>. With tens of thousands of genes per crop and complex interactions underlying every trait that matters, brute-force discovery by humans and traditional techniques is impossibly slow, staggeringly expensive, and almost always wrong.</p>
+
+        <p>Lumen is building the Genomic Dynamics Model (GDM): a proprietary, agentic AI system that treats the genome not as a sequence of tokens, but as the causal, dynamical, biological network it actually is. The GDM reasons backward from a desired trait to the minimum set of gene edits required to produce it. Directly actionable CRISPR targets are delivered in days instead of years.</p>
+
+        <p class="standout">This is our mission, our product, and our sole focus.</p>
+
+        <p>The foundational science exists. Assembling it into something the world has never seen will require scientific and engineering breakthroughs. That is what drives us.</p>
+
+        <p>The problem we're solving belongs to everyone. That is why Lumen is structured as a Public Benefit Corporation. Our structure, our team, and our incentives are all aligned to one outcome: making the world's crops resilient before the window closes.</p>
+
+        <p>Lumen is an American company building our home in the Boston metro area, where world-class genomics research, computational biology talent, and agricultural science converge.</p>
+
+        <p>We are assembling a small, focused team of exceptional engineers and scientists who believe that the most important application of Artificial Intelligence is not generating text or images, but engineering the biological systems that feed the world.</p>
+
+        <p class="standout">If that's you, this is your life's work. Join us.</p>
+
+        <p><a href="mailto:info@lumengenomics.com">info@lumengenomics.com</a></p>
+
+    </div>
+
+    <footer>
+        <p class="copyright">Lumen Genomics, PBC &copy; 2026</p>
+    </footer>
+
+</div>
+
+<script>
+    function toggleTheme() {
+        const html = document.documentElement;
+        const current = html.getAttribute('data-theme');
+        const next = current === 'light' ? 'dark' : 'light';
+        html.setAttribute('data-theme', next);
+        localStorage.setItem('theme', next);
+    }
+
+    // Load saved preference
+    const saved = localStorage.getItem('theme');
+    if (saved) {
+        document.documentElement.setAttribute('data-theme', saved);
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.documentElement.setAttribute('data-theme', 'dark');
+    }
+</script>
+
+</body>
+</html>
