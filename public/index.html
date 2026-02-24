@@ -205,7 +205,15 @@
 
         <p class="standout">If that's you, this is your life's work. Join us.</p>
 
-        <p><a href="/cdn-cgi/l/email-protection#3c55525a537c50495159525b59525351555f4f125f5351"><span class="__cf_email__" data-cfemail="afc6c1c9c0efc3dac2cac1c8cac1c0c2c6ccdc81ccc0c2">[email&#160;protected]</span></a></p>
+        <p><a id="email-link"></a></p>
+        <script>
+            (function() {
+                var u = 'info'; var d = 'lumengenomics.com';
+                var a = document.getElementById('email-link');
+                a.href = 'mailto:' + u + '@' + d;
+                a.textContent = u + '@' + d;
+            })();
+        </script>
 
     </div>
 
@@ -215,7 +223,7 @@
 
 </div>
 
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+<script>
     function toggleTheme() {
         const html = document.documentElement;
         const current = html.getAttribute('data-theme');
